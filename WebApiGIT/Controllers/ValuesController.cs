@@ -20,5 +20,14 @@ namespace WebApiGIT.Controllers
             var str = "Hello world";
             return Ok(DateTime.Now.ToLongTimeString());
         }
+
+        [HttpGet]
+        [Route("days")]
+        public IActionResult Days()
+        {
+            string[] days = { "sunday", "monday", "tuesday" };
+            return Ok(days);
+        }
+        
     }
 }
