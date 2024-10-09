@@ -17,6 +17,7 @@ namespace WebApiGIT.Controllers
         [Route("time")]
         public IActionResult GetResult()
         {
+            var str = "Hello world";
             return Ok(DateTime.Now.ToLongTimeString());
         }
     }
