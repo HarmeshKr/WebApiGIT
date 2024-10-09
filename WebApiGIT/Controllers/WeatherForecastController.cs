@@ -18,7 +18,8 @@ namespace WebApiGIT.Controllers
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet]
+        [Route("forecast")]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
@@ -28,6 +29,13 @@ namespace WebApiGIT.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpGet]
+        [Route("summary")]
+        public IEnumerable<string> GetSummary()
+        {
+            return Summaries;
         }
     }
 }
