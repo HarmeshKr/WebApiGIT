@@ -1,0 +1,6 @@
+@WebApiGIT_HostAddress = http://localhost:5054
+
+GET {{WebApiGIT_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
