@@ -28,5 +28,14 @@ namespace WebApiGIT.Controllers
             string[] colors = { "red", "green", "blue" };
             return Ok(colors);
         }
+
+        [HttpGet]
+        [Route("days")]
+        public IActionResult Days()
+        {
+            string[] days = { "sunday", "monday", "tuesday" };
+            return Ok(days);
+        }
+        
     }
 }
