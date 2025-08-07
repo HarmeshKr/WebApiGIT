@@ -43,5 +43,13 @@ namespace WebApiGIT.Controllers
             string[] days = { "Summer","Winter","Rainy","Autumn","Spring" };
             return Ok(days);
         }
+
+        [HttpGet]
+        [Route("months")]
+        public IActionResult Months()
+        {
+            string[] days = { "January","February","March" };
+            return Ok(days);
+        }
     }
 }
