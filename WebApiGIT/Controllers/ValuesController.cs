@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApiGIT.Controllers
 {
-    [Route("api/[controller]")]
+   // [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
@@ -36,6 +36,12 @@ namespace WebApiGIT.Controllers
             string[] days = { "sunday", "monday", "tuesday" };
             return Ok(days);
         }
-        
+        [HttpGet]
+        [Route("seasons")]
+        public IActionResult Seasons()
+        {
+            string[] days = { "Summer","Winter","Rainy","Autumn","Spring" };
+            return Ok(days);
+        }
     }
 }
