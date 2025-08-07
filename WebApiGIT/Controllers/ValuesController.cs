@@ -51,5 +51,13 @@ namespace WebApiGIT.Controllers
             string[] days = { "January","February","March" };
             return Ok(days);
         }
+
+        [HttpGet]
+        [Route("food")]
+        public IActionResult Food()
+        {
+            string[] days = { "Bread", "Biryani", "Burger","Samosa","Sandwich" };
+            return Ok(days);
+        }
     }
 }
