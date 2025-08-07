@@ -1,0 +1,36 @@
+name: Build and Deploy WebAPI to Azure App Service
+env:
+ APINAME: 'GitActionsAzureWebAppApi'
+ PACKAGE_PATH: './publish'
+on:
+ push:
+  branches:
+   - master
+ workflow_dispatch:
+
+jobs:
+   build:
+     runs-on: windows-latest
+
+     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+         dotnet-version: '8.x'
+      - name: Restore Packages
+        run: dotnet restore ./WebApiGIT.sln
+        
+      - name: Build .net project
+        run: dotnet build ./WebApiGIT.sln -c Release --no-restore
+        
+      - name: Publish App 
+        run: dotnet publish ./WebApiGIT.sln -c Release -o "${{env.PACKAGE_PATH}}" --no-build
+
+      - name: Deploy to Azure 
+        uses: azure/webapps-deploy@v2  
+        with:
+         app-name: ${{env.APINAME}}
+         publish-profile: ${{secret.AZURE_PUBLISH_PROFILE}}
+         package: "${{env.PACKAGE_PATH}}"
+      
+        
