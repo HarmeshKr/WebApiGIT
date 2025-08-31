@@ -59,5 +59,13 @@ namespace WebApiGIT.Controllers
             string[] days = { "Bread", "Biryani", "Burger","Samosa","Sandwich" };
             return Ok(days);
         }
+
+        [HttpGet]
+        [Route("apparel")]
+        public IActionResult Clothes()
+        {
+            string[] cl = {"short","trouser","TShirt","Shorts","Jacket" };
+            return Ok(cl);
+        }
     }
 }
