@@ -67,5 +67,12 @@ namespace WebApiGIT.Controllers
             string[] cl = {"short","trouser","TShirt","Shorts","Jacket" };
             return Ok(cl);
         }
+        [HttpGet]
+        [Route("geography")]
+        public IActionResult Geo()
+        {
+            string[] cl = {"mountain","river","watefall","forest","lake","volcano","hill","gorge" };
+            return Ok(cl);
+        }
     }
 }
