@@ -81,5 +81,13 @@ namespace WebApiGIT.Controllers
             string[] cl = {"Pencil","Eraser","ColorBox","Sharpner","Stencil" };
             return Ok(cl);
         }
+
+         [HttpGet]
+        [Route("birds")]
+        public IActionResult Birds()
+        {
+            string[] cl = {"sparrow","crow","pigeon","eagle","parrot" };
+            return Ok(cl);
+        }
     }
 }
