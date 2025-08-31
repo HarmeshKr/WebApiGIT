@@ -74,5 +74,12 @@ namespace WebApiGIT.Controllers
             string[] cl = {"mountain","river","watefall","forest","lake","volcano","hill","gorge" };
             return Ok(cl);
         }
+        [HttpGet]
+        [Route("nums")]
+        public IActionResult Numss()
+        {
+            string[] cl = {"1","2","3","4" };
+            return Ok(cl);
+        }
     }
 }
