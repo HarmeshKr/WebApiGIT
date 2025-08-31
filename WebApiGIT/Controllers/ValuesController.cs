@@ -75,10 +75,10 @@ namespace WebApiGIT.Controllers
             return Ok(cl);
         }
         [HttpGet]
-        [Route("nums")]
-        public IActionResult Numss()
+        [Route("stationary")]
+        public IActionResult Stat()
         {
-            string[] cl = {"1","2","3","4" };
+            string[] cl = {"Pencil","Eraser","ColorBox","Sharpner","Stencil" };
             return Ok(cl);
         }
     }
