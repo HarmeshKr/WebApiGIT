@@ -91,7 +91,7 @@ namespace WebApiGIT.Controllers
         }
          [HttpGet]
         [Route("trees")]
-        public IActionResult Birds()
+        public IActionResult Trees()
         {
             string[] cl = {"neem","oak","banyan","figtree"};
             return Ok(cl);
