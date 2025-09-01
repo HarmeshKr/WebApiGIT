@@ -56,7 +56,7 @@ namespace WebApiGIT.Controllers
         [Route("food")]
         public IActionResult Food()
         {
-            string[] days = { "Bread", "Biryani", "Burger","Samosa","Sandwich" };
+            string[] days = { "Bread", "Biryani", "Burger","Samosa","Sandwich,"Cake" };
             return Ok(days);
         }
 
